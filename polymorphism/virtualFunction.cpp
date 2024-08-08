@@ -15,6 +15,8 @@ public:
         title = s;
         rating = r;
     }
+    //  void display() {cout<<"Base class"<<endl;} 
+    // virtual void display() {cout<<"Base class"<<endl;}
     virtual void display() {}
 };
 
@@ -62,19 +64,22 @@ int main()
     vlen = 31.4;
     rating = 4.5;
     Videos oopVideo(title, rating, vlen);
-    // oopVideo.display();
+    oopVideo.display();
+    cout<<endl;
 
     // text
     title = "Oop in c++ Text";
     words = 3104;
     rating = 4.55;
     Text oopText(title, rating, vlen);
-    // oopText.display();
+    oopText.display();
+    cout<<endl;
 
     CWH *demo[2];
     demo[0] = &oopVideo;
     demo[1] = &oopText;
 
     demo[0]->display();
+    cout<<endl;
     demo[1]->display();
 }
